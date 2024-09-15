@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #5d326c, #350048); /* Violet */
+    transition: background-color 0.5s;
+}
+.container {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container .btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.container .btn a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 400;
+    z-index: 1;
+    transition: 0.5s;
+    backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+    letter-spacing: 3px;
+}
+.container .btn a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+    transform: skewX(45deg) translate(0);
+    transition: 0.5s;
+    filter: blur(0px);
+}
+.container .btn:hover a::before {
+    transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+}
+.container .btn:hover::before /* lightup button */ {
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+.container .btn::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    background: #f00;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-delay: 0.5;
+}
+.container .btn:hover::after /* lightup button */ {
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+}
+
+.container .btn:nth-child(1)::before,
+.container .btn:nth-child(1)::after {
+    background: #8B00FF;
+    box-shadow: 0 0 5px #8B00FF, 0 0 15px #8B00FF, 0 0 30px #8B00FF, 0 0 60px #8B00FF;
+}
+.container .btn:nth-child(2)::before,
+.container .btn:nth-child(2)::after {
+    background: #4B0082;
+    box-shadow: 0 0 5px #4B0082, 0 0 15px #4B0082, 0 0 30px #4B0082, 0 0 60px #4B0082;
+}
+.container .btn:nth-child(3)::before,
+.container .btn:nth-child(3)::after {
+    background: #0000FF;
+    box-shadow: 0 0 5px #0000FF, 0 0 15px #0000FF, 0 0 30px #0000FF, 0 0 60px #0000FF;
+}
+.container .btn:nth-child(4)::before,
+.container .btn:nth-child(4)::after {
+    background: #00FF00;
+    box-shadow: 0 0 5px #00FF00, 0 0 15px #00FF00, 0 0 30px #00FF00, 0 0 60px #00FF00;
+}
+.container .btn:nth-child(5)::before,
+.container .btn:nth-child(5)::after {
+    background: #FFFF00;
+    box-shadow: 0 0 5px #FFFF00, 0 0 15px #FFFF00, 0 0 30px #FFFF00, 0 0 60px #FFFF00;
+}
+.container .btn:nth-child(6)::before,
+.container .btn:nth-child(6)::after {
+    background: #FFA500;
+    box-shadow: 0 0 5px #FFA500, 0 0 15px #FFA500, 0 0 30px #FFA500, 0 0 60px #FFA500;
+}
+.container .btn:nth-child(7)::before,
+.container .btn:nth-child(7)::after {
+    background: #FF0000;
+    box-shadow: 0 0 5px #FF0000, 0 0 15px #FF0000, 0 0 30px #FF0000, 0 0 60px #FF0000;
+}
